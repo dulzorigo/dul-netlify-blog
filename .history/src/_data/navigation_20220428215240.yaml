@@ -1,0 +1,10 @@
+---
+items:
+  - text: Menu One
+    url: "#"
+  - text: Menu Two
+    url: "#"
+  - text: Work
+    url: "#"
+  - text: Journal
+    url: "/blog"

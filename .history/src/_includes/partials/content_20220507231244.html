@@ -1,0 +1,37 @@
+<div class="w-full max-w-xl my-8 mb-40 lg:mx-0">
+
+    <section class="mt-64 mb-8">
+        {% set postslist = collections.post %}
+    
+        {% for post in postslist | reverse %}
+
+        <a href="{{ post.url | url }}"></a>
+            <article class="my-8">
+
+                    <h2 class="text-base text-neutral-50 mb-2 flex">
+                        <a href="{{ post.url | url }}">
+                            {% if post.data.title %}
+                                {{ post.data.title }}
+                            {% else %}
+                                Untitled
+                            {% endif %}
+                        </a>
+                        <p class="text-base leading-6 text-neutral-700">
+                            <time>
+                                {{ post.date | readableDate }}
+                            </time>
+                        </p>
+                    </h2>
+
+                    {% if post.data.description %}
+                        <p class="text-base text-neutral-600 mb-3">
+                            {{ post.data.description }}
+                        </p>
+                    {% endif %}
+    
+            </article>
+        </a>
+        {% endfor %}
+    </section>
+
+</div>
