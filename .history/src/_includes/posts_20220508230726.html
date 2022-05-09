@@ -1,0 +1,22 @@
+---
+layout: default
+prism: true
+---
+
+<div class="container mx-auto max-w-xl mt-24 px-4 sm:px-0">
+    <div class="pb-5 mb-5 border-b border-neutral-800">
+        <h1 class="text-left font-thin text-3xl text-neutral-50 tracking-normal">{{title}}</h1>
+        <p class="text-sm font-mono text-neutral-700">
+            <time>
+                
+                {{ date | readableDate }}
+
+            </time>
+        </p>
+
+    </div>
+    <article class="text-left my-4 mx-auto tracking-normal text-neutral-300">
+        {{ content | safe }}
+    </article>
+
+</div>
