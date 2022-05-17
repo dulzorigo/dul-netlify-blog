@@ -1,0 +1,6 @@
+---
+items:
+ - text: Work
+   url: "#"
+ - text: Journal
+   url: "/blog"

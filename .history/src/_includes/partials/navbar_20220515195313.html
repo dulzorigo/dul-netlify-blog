@@ -1,0 +1,23 @@
+<div class="{{ 'fixed' if path == 'home' }} w-full backdrop-blur-md bg-black/10 border-b border-neutral-800">
+    <nav class="max-w-xl flex justify-between p-4 lg:px-0 container mx-auto">
+        <!--Logo etc-->
+            <a href="/" class="text-neutral-50 text-base">
+                Dul Zorigoo</a>
+
+        <!--Menu-->
+        <div class="w-full flex-grow flex lg:items-center lg:w-auto text-end ">
+
+            {% if navigation.items %}
+
+                <ul class="pt-6 lg:pt-0 flex justify-end">
+                    {% for item in navigation.items %}
+                        <li class="nav__item">
+                            <a @click="isOpen = false" class="text-base inline-block text-neutral-600 no-underline hover:text-neutral-50 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,51 @@
+<div class="max-w-xl mt-24 mb-16 mx-4 sm:mx-8">
+
+    <section>
+        
+        <div class="text-neutral-500 space-y-8 tracking-normal border-b border-neutral-800 pb-16 font-mono text-sm">
+            <img src="/static/img/dul-website-profile.png" alt="dul">
+            <p>
+                I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia. I simplify complex processes and make people happy through visual design and thoughtful product experiences.
+            </p>
+            <div class="flex flex-wrap mt-6 text-sm">
+                <a href="https://twitter.com/dulzorigoo" class="bg-neutral-800 shadow-sm hover:bg-neutral-700 hover:text-neutral-100 duration-300 flex justify-center p-2 mr-2 rounded-md">Twitter</a>
+                <a href="https://www.instagram.com/dulzorigo/" class="bg-neutral-800 shadow-sm hover:bg-neutral-700 hover:text-neutral-100 duration-300 flex justify-center p-2 mr-2 rounded-md">Instagram</a>
+                <a href="https://www.wiser.studio/" class="bg-neutral-800 shadow-sm hover:bg-neutral-700 hover:text-neutral-100 duration-300 flex justify-center p-2 mr-2 rounded-md">Studio</a>
+            </div>
+        </div>
+
+        <div class="text-neutral-50 text-2xl mt-16 font-light tracking-normal">
+            <h2>
+                Writing
+            </h2>
+        </div>
+
+        {% set postslist = collections.post %}
+    
+        {% for post in postslist | reverse %}
+
+            <article class="my-8">
+                    <h2 class="text-sm text-neutral-50 mb-2 flex space-x-4 font-mono">
+                        <a href="{{ post.url | url }}">
+                            {% if post.data.title %}
+                                {{ post.data.title }}
+                            {% else %}
+                                Untitled
+                            {% endif %}
+                        </a>
+                        <p class="font-mono text-sm leading-6 text-neutral-700">
+                            <time>
+                                {{ post.date | readableDate }}
+                            </time>
+                        </p>
+                    </h2>
+                    {% if post.data.description %}
+                        <p class="text-sm text-neutral-500 mb-3 font-mono leading-16">
+                            {{ post.data.description }}
+                        </p>
+                    {% endif %}
+            </article>
+        {% endfor %}
+    </section>
+
+</div>
