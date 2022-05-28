@@ -1,0 +1,24 @@
+<div class="fixed bottom-0 left-0 right-0 flex text-center mb-8 sm:mx-0 mx-4 z-20">
+    <nav class="max-w-xl flex justify-between items-center px-6 py-4 rounded-full border container mx-auto backdrop-blur-lg bg-black/5 border-neutral-900/10 ">
+        <!--Logo etc-->
+            <a href="/" class="text-neutral-900 text-lg">
+                Dul Zorigoo
+            </a>
+
+        <!--Menu-->
+        <div class="">
+
+            {% if navigation.items %}
+
+                <ul class="flex">
+                    {% for item in navigation.items %}
+                        <li class="nav__item">
+                            <a @click="isOpen = false" class="text-lg inline-block text-neutral-600 hover:text-neutral-900 pl-6" href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,60 @@
+<div class="flex justify-center mt-24 mb-16 mx-4 sm:mx-8">
+
+    <section>
+
+        <div class="text-lg">
+            <div class="max-w-md bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>Hi! 👋 I’m Dul, a product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="max-w-md bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+        </div>
+
+        <div class="text-neutral-50 text-base font-light tracking-normal font-mono">
+            <h2>
+                Writing
+            </h2>
+        </div>
+
+        {% set postslist = collections.post %}
+    
+        {% for post in postslist | reverse %}
+
+            <article class="my-8 max-w-md">
+                    <h2 class="text-lg text-neutral-900 mb-2 flex space-x-4">
+                        <a href="{{ post.url | url }}">
+                            {% if post.data.title %}
+                                {{ post.data.title }}
+                            {% else %}
+                                Untitled
+                            {% endif %}
+                        </a>
+                        <p class="text-lg leading-6 text-neutral-700">
+                            <time>
+                                {{ post.date | readableDate }}
+                            </time>
+                        </p>
+                    </h2>
+                    {% if post.data.description %}
+                        <p class="text-lg text-neutral-500 mb-3">
+                            {{ post.data.description }}
+                        </p>
+                    {% endif %}
+            </article>
+        {% endfor %}
+
+        <div class="max-w-md text-lg">
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+        </div>
+    </section>
+
+</div>

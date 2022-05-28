@@ -1,0 +1,66 @@
+<div class="flex justify-center mt-24 mb-16 mx-4 sm:mx-8">
+
+    <section>
+
+        <div class="text-lg">
+            <div class="w-fit bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p class="">Hi! 👋</p>
+            </div>
+            <div class="max-w-md bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul, a product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="max-w-md bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="w-fit bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-8">
+                <p class="">Here is some of my work</p>
+            </div>
+        </div>
+
+        <div class="text-neutral-900 text-lg font-medium tracking-normal">
+            <h2>
+                Writing
+            </h2>
+        </div>
+
+        {% set postslist = collections.post %}
+    
+        {% for post in postslist | reverse %}
+
+            <article class="my-2 max-w-md bg-neutral-50 p-4 rounded-2xl border border-neutral-200">
+                    <h2 class="text-lg text-neutral-900 font-medium flex space-x-4">
+                        <a href="{{ post.url | url }}">
+                            {% if post.data.title %}
+                                {{ post.data.title }}
+                            {% else %}
+                                Untitled
+                            {% endif %}
+                        </a>
+                    </h2>
+                    {% if post.data.description %}
+                        <p class="text-lg text-neutral-800">
+                            {{ post.data.description }}
+                        </p>
+                    {% endif %}
+                    <p class="text-lg font-normal text-neutral-400">
+                        <time>
+                            {{ post.date | readableDate }}
+                        </time>
+                    </p>
+            </article>
+        {% endfor %}
+
+        <div class="max-w-md text-lg">
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+            <div class="bg-neutral-200 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
+                <p>I’m Dul. A product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
