@@ -1,0 +1,10 @@
+---
+items:
+ - text: Twitter
+   url: "/about"
+ - text: Instagram
+   url: "/about"
+ - text: Email
+   url: "/about"
+ - text: About
+   url: "/about"

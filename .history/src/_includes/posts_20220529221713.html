@@ -1,0 +1,25 @@
+---
+layout: journal
+---
+
+    <div class="container mx-auto mb-32 mt-16 px-4 sm:px-0">
+        <article class="grid grid-cols-3 container text-lg justify-center text-left mx-auto text-neutral-900">
+            <div class="col-span-3 w-3/4 justify-items-center">
+                <img src="{{ featuredImage | url }}" alt="{{ featured image }}"></img>
+            </div>
+            <div></div>
+            <div class="container mx-auto mb-8 border-neutral-800">
+                <h1 class="text-left text-2xl font-semibold text-neutral-900 tracking-normal">{{title}}</h1>
+                <p class="text-lg text-neutral-700">
+                    <time>
+                        
+                        {{ date | readableDate }}
+        
+                    </time>
+                </p>
+            </div>
+            <div></div>
+            {{ content | safe }}
+        </article>
+
+</div>

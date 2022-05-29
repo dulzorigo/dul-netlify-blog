@@ -1,57 +1,21 @@
-<div class="flex justify-center mt-16 mb-32 mx-4 sm:mx-8 z-10">
+---
+layout: default
+---
 
-    <section>
-
-        <div class="text-lg">
-            <div class="w-fit backdrop-blur-md bg-black/5 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
-                <p class="">Hi! 👋</p>
-            </div>
-            <div class="max-w-md backdrop-blur-md bg-black/5 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
-                <p>I’m Dul, a product designer and professional web surfer currently based in Ulaanbaatar, Mongolia.</p>
-            </div>
-            <div class="max-w-md backdrop-blur-md bg-black/5 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-2">
-                <p>I simplify complex processes and make people happy through visual design and thoughtful product experiences.</p>
-            </div>
-            <div class="w-fit backdrop-blur-md bg-black/5 text-neutral-900 p-4 rounded-2xl rounded-bl tracking-normal mb-8">
-                <p class="">Here is some of my work</p>
-            </div>
-        </div>
-
-        <div class="text-neutral-900 text-lg font-medium tracking-normal mb-4">
-            <h2>
-                Writing
-            </h2>
-        </div>
-
-            {% set postslist = collections.post %}
+    <div class="max-w-md container mx-auto mb-32 mt-16 px-4 sm:px-0">
+        <div class="mb-8 border-neutral-800">
+            <h1 class="text-left text-2xl font-semibold text-neutral-900 tracking-normal">{{title}}</h1>
+            <p class="text-lg text-neutral-700">
+                <time>
+                    
+                    {{ date | readableDate }}
     
-            {% for post in postslist | reverse %}
-            <a href="{{ post.url | url }}">
-                
-                <article class="mb-2 backdrop-blur-md bg-black/5 max-w-md space-y-2 p-4 rounded-2xl">
-                        <h2 class="text-lg text-neutral-900 font-medium flex space-x-4">
-                            {% if post.data.title %}
-                                {{ post.data.title }}
-                            {% else %}
-                                Untitled
-                            {% endif %}
-                        </h2>
-                        {% if post.data.description %}
-                            <p class="text-lg text-neutral-800">
-                                {{ post.data.description }}
-                            </p>
-                        {% endif %}
-                        <p class="text-lg font-normal text-neutral-400">
-                            <time>
-                                {{ post.date | readableDate }}
-                            </time>
-                        </p>        
-                </article>
-
-            </a>
-            {% endfor %}
-            
-
-    </section>
+                </time>
+            </p>
+    
+        </div>
+        <article class="text-lg text-left mx-auto text-neutral-900">
+            {{ content | safe }}
+        </article>
 
 </div>

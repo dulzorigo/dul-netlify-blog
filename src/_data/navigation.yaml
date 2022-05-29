@@ -1,6 +1,10 @@
 ---
 items:
- - text: Work
-   url: "/work"
+ - text: Twitter
+   url: "#"
+ - text: Instagram
+   url: "#"
+ - text: Email
+   url: "#"
  - text: About
    url: "/about"

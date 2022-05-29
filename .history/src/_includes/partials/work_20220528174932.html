@@ -1,0 +1,24 @@
+<title>
+    {{title}}
+  </title>
+  {% if description %}
+    <meta name="description" content="{{description}}"/>
+  {% endif %}
+  {% block head %}{% endblock %}
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+  {% if prism == true %}
+    <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+  {% endif %}
+</head>
+<body class="">
+  <div class="bg-gradient-to-tl via-white from-[#A5FFFF] w-full h-full fixed z-0 opacity-50"></div>
+  <div class="bg-gradient-to-tr via-white from-[#EBCCFE] w-full h-full fixed z-0 opacity-30"></div>
+  {% include "./partials/navbar.html" %}
+
+  {{ content | safe }}
+
+  <!-- {% include "./partials/footer.html" %} -->
+
+  <script src="/static/js/alpine.js"></script>
+
+</body>
