@@ -1,6 +1,6 @@
 ---
 items:
  - text: Email
-   url: "mailto:dulzorigoo@gmail.com"
+   url: "#"
  - text: About me
    url: "/about"

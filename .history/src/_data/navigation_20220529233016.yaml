@@ -1,0 +1,6 @@
+---
+items:
+ - text: Email
+   url: "#"
+ - text: About
+   url: "/about"

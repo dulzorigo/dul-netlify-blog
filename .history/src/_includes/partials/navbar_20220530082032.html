@@ -1,5 +1,5 @@
-<div class="fixed bottom-0 left-0 right-0 flex text-center mb-8 mx-4 z-20">
-    <nav class="w-full max-w-4xl flex justify-between items-center px-6 py-4 rounded-full mx-auto bg-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.10)]">
+<div class="fixed bottom-0 left-0 right-0 flex text-center mb-8 sm:mx-0 mx-4 z-20">
+    <nav class="max-w-xl flex justify-between items-center px-6 py-4 rounded-full border container mx-auto backdrop-blur-lg bg-white/60 border-neutral-900/5 ">
         
         <!--Logo etc-->
             <a href="/" class="text-neutral-900 text-lg">
@@ -14,7 +14,7 @@
                 <ul class="flex">
                     {% for item in navigation.items %}
                         <li class="nav__item">
-                            <a @click="isOpen = false" class="text-lg inline-block text-neutral-900 hover:text-neutral-900 pl-6" href="{{ item.url }}">{{ item.text }}</a>
+                            <a @click="isOpen = false" class="text-lg inline-block text-neutral-600 hover:text-neutral-900 pl-6" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
                     {% endfor %}
                 </ul>

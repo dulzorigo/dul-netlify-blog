@@ -1,0 +1,28 @@
+---
+title: Collect Food Delivery
+description: Information about my website and what i plan to do with
+author: Dul Zorigoo
+date: 2022-05-09
+featuredImage: /static/img/halo.png
+tags:
+  - post
+---
+
+<!-- Text -->
+<div></div>
+<p class="max-w-md mb-8">
+  I've been working with my team to build and scale our design agency, [wiserstudio](https://www.wiser.studio/). With all the client work and daily to-do's I felt like having something to continuously tinker with would help me mentally and professionally too (quite obvious).
+</p>
+<div></div>
+
+<!-- Image full -->
+<div class="col-span-3">
+  <img src="{{ featuredImage | url }}" alt="featured image" class="rounded-xl w-full">
+</div>
+
+<!-- Text -->
+<div></div>
+<p class="max-w-md my-8">
+  I've been working with my team to build and scale our design agency, [wiserstudio](https://www.wiser.studio/). With all the client work and daily to-do's I felt like having something to continuously tinker with would help me mentally and professionally too (quite obvious).
+</p>
+<div></div>
