@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYZ8KLZYK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FSYZ8KLZYK');
+    </script>
+    
+    <title>
+      {{title}}
+    </title>
+    {% if description %}
+      <meta name="description" content="{{description}}"/>
+    {% endif %}
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    {% if prism == true %}
+      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    {% endif %}
+  </head>
+  <body class="">
+    <div class="bg-gradient-to-tl via-black from-[#A5FFFF] w-full h-full fixed z-0 opacity-15"></div>
+    <div class="bg-gradient-to-tr via-black from-[#EBCCFE] w-full h-full fixed z-0 opacity-12"></div>
+    {% include "./partials/navbar.html" %}
+
+    {{ content | safe }}
+
+    <!-- {% include "./partials/footer.html" %} -->
+
+    <script src="/static/js/alpine.js"></script>
+
+  </body>
+</html>

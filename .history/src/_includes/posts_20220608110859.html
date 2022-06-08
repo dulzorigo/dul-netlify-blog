@@ -1,0 +1,34 @@
+---
+layout: journal
+---
+
+    <div class="fixed flex w-full justify-center z-0">
+        <div class="bg-[#3A5667] w-96 h-96 rounded-full blur-[150px]">
+        </div>
+        <div class="bg-[#0E0924] w-96 h-96 rounded-full blur-[150px]">
+        </div>
+    </div>
+
+    <div class="container mx-auto justify-center mb-32 mt-16 px-4 sm:px-0 z-10">
+        <article class="text-lg text-left mx-auto text-white/70">
+
+            <!-- Title section -->
+            <div class="mx-auto max-w-md mt-32 mb-16">
+                <h1 class="text-left text-2xl font-semibold text-white tracking-normal">{{title}}</h1>
+                <p class="text-base text-white/50">
+                    <time>
+                        
+                        {{ date | readableDate }}
+        
+                    </time>
+                </p>
+            </div>
+
+            <div class="flex w-full justify-center mb-8">
+                <img src="{{ featuredImage | url }}" alt="featured image" class="rounded-xl w-full max-w-5xl">
+            </div>
+
+            <!-- Content -->
+            {{ content | safe }}
+        </article>
+    </div>
