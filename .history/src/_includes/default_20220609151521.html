@@ -27,12 +27,21 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body class="bg-neutral-900">
+  <body class="bg-black">
+
+    <div class="fixed flex w-full sm:justify-center">
+      <div class="bg-[#3A5667] w-96 h-96 rounded-full blur-[150px]">
+      </div>
+      <div class="bg-[#0E0924] w-96 h-96 rounded-full blur-[150px]">
+      </div>
+    </div>
+
+    <div class="bg-gradient-to-tl from-[#A5FFFF] to-[#EBCCFE] w-full h-full fixed z-0 opacity-5"></div>
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    <!-- {% include "./partials/footer.html" %} -->
 
     <script src="/static/js/alpine.js"></script>
 
