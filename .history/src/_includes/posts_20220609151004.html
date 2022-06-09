@@ -8,7 +8,7 @@ layout: journal
             <!-- Title section -->
             <div class="mx-auto max-w-lg sm:mt-32 mb-8 sm:mb-16">
                 <h1 class="text-left text-4xl font-semibold text-white tracking-normal">{{title}}</h1>
-                <p class="text-sm font-mono text-white/50">
+                <p class="text-base text-white/50">
                     <time>
                         
                         {{ date | readableDate }}
@@ -17,7 +17,7 @@ layout: journal
                 </p>
             </div>
 
-            <div class="flex w-full justify-center mb-8 sm:mb-32">
+            <div class="flex w-full justify-center mb-16 sm:mb-32">
                 <img src="{{ featuredImage | url }}" alt="featured image" class="rounded-xl w-full max-w-5xl">
             </div>
 
