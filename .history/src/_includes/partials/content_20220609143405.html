@@ -13,19 +13,18 @@
                 <p>I’m Dul, a digital product designer currently based in Ulaanbaatar, Mongolia</p>
             </div>
             <div class="max-w-md backdrop-blur-md bg-white/5 border border-neutral-100/5 text-white/80 p-4 rounded-3xl rounded-tl-lg rounded-bl-lg tracking-normal leading-snug mb-2">
-                <p>I design user interfaces and design systems to create enjoyable experiences for end-users and design teams</p>
+                <p>I specialize in designing detailed user interfaces and design systems to create enjoyable experiences for end-users and design teams</p>
             </div>
-            <div class="w-fit backdrop-blur-md bg-white/5 border border-neutral-100/5 text-white/80 p-4 rounded-3xl rounded-bl rounded-tl-lg tracking-normal leading-snug">
-                <p class="">Below are some of my work</p>
+            <div class="w-fit backdrop-blur-md bg-white/5 border border-neutral-100/5 text-white/80 p-4 rounded-3xl rounded-bl rounded-tl-lg tracking-normal leading-snug mb-8">
+                <p class="">Here is some of my work</p>
             </div>
         </div>
-
-        <div class="h-px max-w-md bg-white/10 my-8"></div>
 
         <div class="text-white text-lg font-medium tracking-normal mb-4">
             <h2>
                 Work
             </h2>
+            
         </div>
 
             {% set postslist = collections.post %}
@@ -44,11 +43,11 @@
                                 {% endif %}
                             </h2>
                             {% if post.data.description %}
-                                <p class="text-lg text-white/80">
+                                <p class="text-lg text-white/60">
                                     {{ post.data.description }}
                                 </p>
                             {% endif %}
-                            <p class="text-sm font-mono text-white/50 mt-1">
+                            <p class="text-base font-normal text-white/50">
                                 <time>
                                     {{ post.date | readableDate }}
                                 </time>
