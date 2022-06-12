@@ -1,0 +1,8 @@
+---
+items:
+ - text: Home
+   url: "/"
+ - text: Email
+   url: "mailto:dulzorigoo@gmail.com"
+ - text: About
+   url: "/about"
